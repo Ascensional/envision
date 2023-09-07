@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html{
+    background-color:aquamarine ;
+    opacity: 0.5;
+
+}
+
+
+header > h1
+{
+    text-align: center;
+    padding: 1 rem 3rem;
+    background-color: aqua;
+    
+}
+#try{
+    text-decoration: none;
+    border-style: solid 1 rem;
+
+}
