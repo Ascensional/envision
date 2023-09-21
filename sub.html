@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="hume.css" type="text/css">
+    <script src="https://kit.fontawesome.com/99635554ad.js" crossorigin="anonymous"></script>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+       <img class="logo" src="logo.jpg" alt="logo">
+            <ul class="links">
+                <li><a href="/home.html">home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        /* CSS for styling the product grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns in the grid */
+            gap: 20px; /* Gap between products */
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* CSS for the product details modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Product Page</h1>
+
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product" id="product1">
+            <img src="hi.jpg" alt="beads">
+            <h3>Product 1</h3>
+            <p>Price: $19.99</p>
+        </div>
+        
+
+        <!-- Product 2 -->
+        <div class="product" id="product2">
+            <img src="image.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Price: $24.99</p>
+        </div>
+
+        <div class="product" id="product3">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Price: $24.99</p>
+        </div>
+
+ <div class="product" onclick="showProductDetails(2)">
+            <img src="product4.jpg" id="product4">
+            <h3>Product 4</h3>
+            <p>Price: $24.99</p>
+        </div>
+
+        <!-- Add more products here -->
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductDetails()">&times;</span>
+            <h2>Product Details</h2>
+            <img src="" alt="Product Image" id="modalImage">
+            <h3 id="modalTitle"></h3>
+            <p id="modalPrice"></p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to show and hide the product details modal
+        function showProductDetails(productId) {
+            const modal = document.getElementById("productModal");
+            modal.style.display = "block";
+
+            // Set the product details based on productId (you can fetch data from a database)
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalPrice = document.getElementById("modalPrice");
+
+            if (productId === 1) {
+                modalImage.src = "product1.jpg";
+                modalTitle.innerText = "Product 1";
+                modalPrice.innerText = "Price: $19.99";
+            } else if (productId === 2) {
+                modalImage.src = "product2.jpg";
+                modalTitle.innerText = "Product 2";
+                modalPrice.innerText = "Price: $24.99";
+            }else if (productId === 3) {
+                modalImage.src = "product3.jpg";
+                modalTitle.innerText = "Product 3";
+                modalPrice.innerText = "Price: $24.99";
+            }else if (productId === 4) {
+                modalImage.src = "product4.jpg";
+                modalTitle.innerText = "Product 4";
+                modalPrice.innerText = "Price: $24.99";
+            }
+
+            // Add more product details here based on productId
+        }
+        function closeProductDetails() {
+            const modal = document.getElementById("productModal");
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("productModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        // Get the product element by its id
+        const product1 = document.getElementById("product1");
+    
+        // Add a click event listener to the product element
+        product1.addEventListener("click", () => {
+            // Redirect to another HTML file (replace "other-page.html" with the actual file path)
+            window.location.href = "cd.html";
+        });
+   
+        // Get the product element by its id
+        const product2 = document.getElementById("product2");
+    
+        // Add a click event listener to the product element
+        product2.addEventListener("click", () => {
+            // Redirect to another HTML file (replace "other-page.html" with the actual file path)
+            window.location.href = "cd.html";
+        });
+        
+  
+        // Get the product element by its id
+        const product3 = document.getElementById("product3");
+    
+        // Add a click event listener to the product element
+        product3.addEventListener("click", () => {
+            // Redirect to another HTML file (replace "other-page.html" with the actual file path)
+            window.location.href = "cd.html";
+        });
+ 
+        // Get the product element by its id
+        const product4 = document.getElementById("product4");
+    
+        // Add a click event listener to the product element
+        product4.addEventListener("click", () => {
+            // Redirect to another HTML file (replace "other-page.html" with the actual file path)
+            window.location.href = "cd.html";
+        });
+    </script>
+    
+    
+</body>
+</html>

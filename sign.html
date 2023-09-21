@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+</head>
+
+<body>
+    <nav>
+        <p><img class="logo" src="logo.jpg" alt="logo">MIS</p>
+        </nav>
+
+    <div class="container" id="contain">
+        <div class="form-container">
+            <div class="form-toggle">
+                <button id="login-toggle" class="active">Login</button>
+                <button id="signup-toggle">Sign Up</button>
+            </div>
+            <form id="login-form" action="register.php" method="post">
+                <h2>Login</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="login"><a href="home.html">Login</a></button>
+            </form>
+            <form id="signup-form" action="register.php" method="post">
+                <h2>Sign Up</h2>
+                <input type="text"name="signup-name" placeholder="Full name" required>
+                <input type="text" name="signup-username" placeholder="Username" required>
+                <input type="email" name="signup-email" placeholder="Email" required>
+                <input type="password" name="signup-password" placeholder="Password" required>
+                <input type="password" name="signup-cpassword" placeholder=" Confirm Password" required>
+                <button type="submit" name="signup"><a href="home.html">Sign Up</a></button>
+            </form>
+        </div>
+    <lottie-player src="https://lottie.host/d7d8d3c9-42b1-4d39-94a9-2e68d9008538/0NYK4KtJNr.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    </div>
+    <footer>
+        <p>&copy; MIS</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
